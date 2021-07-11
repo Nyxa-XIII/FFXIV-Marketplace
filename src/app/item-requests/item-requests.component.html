@@ -1,0 +1,65 @@
+<div class="main-content">
+    <!-- TODO 1: On submit: [] Insert new row to database with timestamp. | [] Update table with most recent entries in database. | [x] Display submitted information. -->
+    <!-- TODO 2: Filter on all possible item names using a search bar dropdown + Item API -->
+    <div class="container">
+        <div [hidden]="submitted">
+            <h2 class="center">Request an Item</h2>
+            <form (ngSubmit)="onSubmit()" #itemRequestForm="ngForm">
+                <div class="panel center">
+                    <p>A general summary of how this section works.</p>
+                    <div class="form-group half center">
+                        <label for="itemName">Item Name</label>
+                        <select class="form-control" id="itemName" required [(ngModel)]="model.itemName" name="itemName" #itemName="ngModel">
+                            <option *ngFor="let item of items" [value]="item">{{item}}</option>
+                        </select>
+                        <!-- <div [hidden]="itemName.valid || itemName.pristine" class="alert alert-danger half center">Item name is required</div> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Amount</label>
+                        <input type="text" class="form-control half center" id="amount" [(ngModel)]="model.amount" name="amount" placeholder="0">
+                        <!-- <div [hidden]="amount.valid || amount.pristine" class="alert alert-danger">Item amount is required</div> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="userName">Username</label>
+                        <input type="text" class="form-control half center" id="userName" required [(ngModel)]="model.userName" name="userName" #userName="ngModel" placeholder="Discord#1234">
+                        <div [hidden]="userName.valid || userName.pristine" class="alert alert-danger half center">Username is required</div>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-danger" (click)="submitItemRequest()" [disabled]="!itemRequestForm.form.valid">Submit Request</button>
+            </div>
+            </form>
+        </div>
+      
+        <div [hidden]="!submitted">
+            <h2 class="center">{{ model.userName }} submitted a request for:</h2>
+            <div class="panel center">
+                <h4>{{ model.amount }} {{ model.itemName }}</h4>
+                <br>
+                <button class="btn btn-danger" (click)="submitted=false">New Request</button>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="center">Current Requests</h2>
+    <div class="panel center">
+        <p>A general summary of how this section works.</p>
+        <table class="table table-bordered table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">Requested Item</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Requested By</th>
+                    <th scope="col">Date Requested</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Seed</th>
+                    <td>99</td>
+                    <td>Bob</td>
+                    <td>07/07/2021</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

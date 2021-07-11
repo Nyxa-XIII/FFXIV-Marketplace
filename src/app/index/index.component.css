@@ -1,0 +1,72 @@
+.bg-img {
+    background-image: url(https://pbs.twimg.com/media/DB0pOLNXcAAHnGV.jpg);
+    background-repeat: no-repeat;
+    height: 91vh;
+    width: 100%;
+    background-size: 100% 100%;
+    position: absolute;
+    top:9vh;
+    left: 0;
+    opacity: 100%;
+    z-index: -1;
+  }
+
+  .bg-img2 {
+    background-image: url(https://icdn.digitaltrends.com/image/digitaltrends/ffxiv-diadem-guide01-768x432.jpg);
+    background-repeat: no-repeat;
+    height: 50vh;
+    width: 45vw;
+    background-size: 100% 100%;
+    position: absolute;
+    top:100vh;
+    left: 5vw;
+    opacity: 100%;
+    z-index: -1;
+  }
+
+  .bg-img3 {
+    background-image: url(https://cdn.discordapp.com/attachments/442814524886876170/863097229115654154/ffxiv_marketplace.png);
+    background-repeat: no-repeat;
+    height: 50vh;
+    width: 45vw;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 150vh;
+    left: 50vw;
+    opacity: 100%;
+    z-index: -1;
+  }
+
+  #fold2 {
+    top:100vh;
+    width: 45vw;
+    left: 50vw;
+    height: 50vh;
+    position: absolute;
+  }
+
+  #fold3 {
+    width: 45vw;
+    top:150vh;
+    left: 5vw;
+    height: 50vh;
+    position: absolute;
+  }
+
+  #welcome-text {
+    margin-top: 11vh;
+    color: white;
+    text-shadow: -4px -1px black;
+  }
+
+  #index-card {
+    display: flex;
+    flex-direction: column;
+    margin: 2.75vw auto;
+  }
+
+  #index-card2 {
+    display: flex;
+    flex-direction: column;
+    margin: 4.75vw auto;
+  }

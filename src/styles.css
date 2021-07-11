@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";  
+
+.center {
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+.panel {
+    width: 50vw;
+    padding-bottom: 1%;
+}
+
+.half {
+    width: 50%;
+}
+
+.left {
+    text-align: left;
+}
+
+.justify-right {
+    margin-left: auto;
+}
+
+/* NAVBAR */
+.nav-button {
+    margin: 0px 10px;
+}
+
+.main-content {
+    padding-top: 10px;
+}
+
+.w-90 {
+    width: 90vw;
+    max-width: 90vw;
+}
